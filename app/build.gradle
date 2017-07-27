@@ -14,6 +14,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -33,4 +35,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.android.gms:play-services:11.0.2'
+    implementation 'com.google.firebase:firebase-perf:11.0.2'
+    implementation 'com.google.firebase:firebase-ads:11.0.2'
 }

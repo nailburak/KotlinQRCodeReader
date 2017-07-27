@@ -13,6 +13,7 @@ import com.google.android.gms.vision.barcode.Barcode
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Context.CLIPBOARD_SERVICE
 import android.widget.Toast
+import com.google.android.gms.ads.AdRequest
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,7 +32,8 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(Intent(applicationContext, ScanActivity::class.java), REQUEST_CODE)
         }
 
-
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
